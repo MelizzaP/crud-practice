@@ -28,6 +28,9 @@ class SoundsController < ApplicationController
   end
   
   def destroy
+    @sound = Sound.find(params[:id])
+    @sound.destroy 
+    redirect_to sounds_path
   end
   
   private 
