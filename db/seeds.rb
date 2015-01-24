@@ -36,3 +36,18 @@ Video.create([
     user_id: 1
   }
   ])
+
+Sound.create([
+  {
+    title: "Shake it Off cover",
+    soundcloud_url: "https://soundcloud.com/laurazocca/shake-it-off-taylor-swift-cover"
+  },
+  {
+    title: "Another Story",
+    soundcloud_url: "https://soundcloud.com/theheadandtheheart/the-head-and-the-heart-another"
+  },
+  {
+    title: "The Wire",
+    soundcloud_url: "https://soundcloud.com/haimtime/haimthewire"
+  }
+])

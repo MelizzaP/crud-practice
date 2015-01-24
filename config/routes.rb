@@ -1,6 +1,16 @@
 Metube::Application.routes.draw do
-  root "videos#index"
+  root 'pages#index'
   resources :videos
+  resources :sounds
+  
+ #  get "/sounds" 
+#   get "sounds/show"
+#   get "sounds/new"
+#   get "sounds/create"
+#   get "sounds/edit"
+#   get "sounds/update"
+#   get "sounds/destroy"
+
   
   # get "/videos", to: "videos#index"
 #   get "/videos/new", to: "videos#new"
