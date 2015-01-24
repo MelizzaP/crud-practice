@@ -5,4 +5,5 @@
 <iframe width="420" height="315" src="//www.youtube.com/embed/<%= @video.youtube_id %>" frameborder="0" allowfullscreen></iframe>
 <br>
 <br>
+<%= link_to 'edit', edit_video_path(@video) %> |
 <%= link_to "delete", "/videos/#{params[:id]}", method: :delete %> 

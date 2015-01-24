@@ -18,9 +18,13 @@ class SoundsController < ApplicationController
   end
 
   def edit
+    @sound = Sound.find(params[:id])
   end
 
   def update
+    @sound = Sound.find(params[:id])
+    @sound.update(sound_params)
+    redirect_to sounds_path
   end
   
   def destroy

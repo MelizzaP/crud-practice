@@ -1,2 +1,9 @@
-<h1>Sounds#edit</h1>
-<p>Find me in app/views/sounds/edit.html.erb</p>
+<%= form_tag('/sounds/' + params[:id], method: :put) do %>
+  <%= label_tag('sound[title]', 'Title:') %>
+  <%= text_field(:sound, :title) %>
+  <br>
+  <%= label_tag('sound[soundcloud_url]', 'Soundcloud URL:') %>
+  <%= text_field(:sound, :soundcloud_url) %>
+  <br>
+  <%= submit_tag('update sound') %>
+<% end %> 

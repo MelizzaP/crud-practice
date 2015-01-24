@@ -21,7 +21,7 @@
 </form>
 -->
 
-<%= form_tag("/videos/"+params[:id]+"/edit", method: "put") do %>
+<%= form_tag("/videos/" + params[:id], method: :put) do %>
   <%= label_tag('video[title]', "Title:") %>
   <%= text_field(:video, :title) %><br>
 

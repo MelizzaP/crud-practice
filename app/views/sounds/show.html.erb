@@ -1,3 +1,6 @@
 <h1><%= @sound.title %></h1>
 <br>
 <%= render "sounds/soundcloud_widget" %>
+<br><br>
+<%= link_to 'edit', edit_sound_path(@sound) %> |
+<%= link_to 'delete', '/sounds/' + params[:id], method: :delete %>
