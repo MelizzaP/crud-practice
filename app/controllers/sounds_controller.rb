@@ -8,9 +8,13 @@ class SoundsController < ApplicationController
   end
 
   def new
+    @sound = Sound.new
   end
 
   def create
+    sound = Sound.create(sound_params)
+    sound.save
+    redirect_to sounds_path
   end
 
   def edit
@@ -18,7 +22,12 @@ class SoundsController < ApplicationController
 
   def update
   end
-
+  
   def destroy
+  end
+  
+  private 
+  def sound_params
+    params.require(:sound).permit(:title, :soundcloud_url)
   end
 end
