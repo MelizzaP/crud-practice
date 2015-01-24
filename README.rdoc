@@ -31,4 +31,4 @@
   4. Run rails server
   5. In your browser go to address 10.10.10.10:3000
   
-*To_run_test_suite_type_bundle_exec_rspec_inside_the_console.*
+*To run test suite type bundle exec rspec inside the console.*
