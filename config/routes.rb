@@ -6,6 +6,6 @@ Metube::Application.routes.draw do
   post '/videos' => 'videos#create'
   get '/videos/:id/edit', to: 'videos#edit'
   put '/videos/:id/edit', to: 'videos#update'
-
+  delete '/videos/:id', to: 'videos#destroy'
 
 end
