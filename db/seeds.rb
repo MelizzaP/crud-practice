@@ -51,3 +51,16 @@ Sound.create([
     soundcloud_url: "https://soundcloud.com/haimtime/haimthewire"
   }
 ])
+
+Comment.create([
+  {
+    media_id: 1,
+    content: "groovy",
+    media_type: 'sound'
+  },
+  {
+    media_id: 1,
+    content: "this movie sucks",
+    media_type: 'video'
+  }
+])

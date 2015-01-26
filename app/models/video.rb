@@ -1,3 +1,5 @@
 class Video < ActiveRecord::Base
-  belongs_to :user
+  has_many :comments, as: :media
+  
+  validates :youtube_id, presence: :true
 end

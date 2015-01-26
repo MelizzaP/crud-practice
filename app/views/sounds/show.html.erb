@@ -4,3 +4,17 @@
 <br><br>
 <%= link_to 'edit', edit_sound_path(@sound) %> |
 <%= link_to 'delete', '/sounds/' + params[:id], method: :delete %>
+<br><br>
+<h4>Comments</h4>
+<%= form_for Comment.new, {url: sound_comments_path(@sound)} do |f| %>
+  <%= f.text_area :content%>
+  <br>
+  <%= f.submit %>
+<% end %>
+<br><br>
+
+<% if @comments %>
+  <% @comments.each do |c| %>
+    content: <%= c.content %>
+  <% end %>
+<% end %>
