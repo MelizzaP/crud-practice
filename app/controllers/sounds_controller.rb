@@ -5,6 +5,8 @@ class SoundsController < ApplicationController
 
   def show
     @sound = Sound.find(params[:id])
+    @comment = @sound.comments.new
+    @comments = @sound.comments
   end
 
   def new

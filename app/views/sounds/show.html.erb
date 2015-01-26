@@ -6,15 +6,13 @@
 <%= link_to 'delete', '/sounds/' + params[:id], method: :delete %>
 <br><br>
 <h4>Comments</h4>
-<%= form_for Comment.new, {url: sound_comments_path(@sound)} do |f| %>
-  <%= f.text_area :content%>
-  <br>
+<%= form_for @comment, {url: sound_comments_path(@sound)} do |f| %>
+  <%= f.text_area :content %><br>
   <%= f.submit %>
 <% end %>
+
 <br><br>
 
-<% if @comments %>
-  <% @comments.each do |c| %>
-    content: <%= c.content %>
-  <% end %>
+<% @comments.each do |c| %>
+  <%= c.content %><br>
 <% end %>
